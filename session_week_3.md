@@ -63,7 +63,7 @@ Word2Vec 모델에는 세 가지 주요 구성 요소가 있다.
 
 아키텍쳐
 -----------
-<p align="center"><img width="35%" src="https://miro.medium.com/max/1400/1*QK2KNCZ1pczCq-uTse-dmA.png" /></p>
+<p align="center"><img width="70%" src="https://miro.medium.com/max/1400/1*QK2KNCZ1pczCq-uTse-dmA.png" /></p>
 
 ### 어휘 빌더 (Vocabulary Builder)
 이 컴포넌트는 주로 문장의 형태로 있는 원시 텍스트 데이터를 얻는다.
