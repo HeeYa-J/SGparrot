@@ -53,7 +53,7 @@ Word2Vec 모델에는 세 가지 주요 구성 요소가 있다.
 원시 텍스트 코퍼스, 혹은 (실제 어플리케이션에서는) 큰 코포라를 입력으로 사용한다.
 
 2. Word2Vec의 출력
-<p align="center"><img width="35%" src="https://miro.medium.com/max/1570/0*jjpXSH7sZPfAbZWS.PNG" /></p>
+<p align="center"><img width="60%" src="https://miro.medium.com/max/1570/0*jjpXSH7sZPfAbZWS.PNG" /></p>
 일반적인 목표는, 문맥을 제공하기만 하면 그 문맥에 가장 적합한 단어의 확률을 예측하는 것이다. 위의 그림에서 sat 단어를 취해서 목표에 따라 sat 단어를 벡터 형식으로 변환하고, sat의 벡터 형태를 사용해 이 문장에서 사용된 다른 단어들인 fat, cat 등의 단어의 확률을 예측할 수 있다.
 
 3. Word2Vec 모델의 구조 컴포넌트
@@ -63,7 +63,7 @@ Word2Vec 모델에는 세 가지 주요 구성 요소가 있다.
 
 아키텍쳐
 -----------
-<p align="center"><img width="70%" src="https://miro.medium.com/max/1400/1*QK2KNCZ1pczCq-uTse-dmA.png" /></p>
+<p align="center"><img width="80%" src="https://miro.medium.com/max/1400/1*QK2KNCZ1pczCq-uTse-dmA.png" /></p>
 
 ### 어휘 빌더 (Vocabulary Builder)
 이 컴포넌트는 주로 문장의 형태로 있는 원시 텍스트 데이터를 얻는다.
@@ -75,7 +75,7 @@ Word2Vec 모델에는 세 가지 주요 구성 요소가 있다.
 
 문맥 윈도우는 일종의 sliding window이다. 윈도우의 크기는 사용자가 지정할 수 있다(일반적으로는 5~10 단어의 문맥 윈도우 크기를 사용한다고 함).
 
-<p align="center"><img width="35%" src="https://miro.medium.com/max/568/0*Ghg8pl2oX8r5kdks.PNG" /></p>
+<p align="center"><img width="55%" src="https://miro.medium.com/max/568/0*Ghg8pl2oX8r5kdks.PNG" /></p>
 
 문맥 빌더의 출력은 단어 쌍(word pairing)이며 이들 단어 쌍은 신경망에 제공된다. 예를 들어 그림의 네번째 단계에서는 (sat, on, the)(sat, cat, fat)이 출력돼 전달되는데, 신경망은 각 단어 쌍이 나타나는 횟수로 기본 통계를 학습하기 때문에 (sat, dog, fat)보다는 (sat, cat, fat)에 대해 더 많은 훈련 예제를 얻는 것이고, 훈련이 끝났을 때 sat 단어를 입력 내용으로 넣으면 dog보다 cat에 대해 훨씬 더 높은 확률이 나온다.
 
@@ -84,4 +84,4 @@ Word2Vec 모델에는 세 가지 주요 구성 요소가 있다.
 
 Word2Vec에는 두 가지 메인 처리 알고리즘이 있다.
 
-<p align="center"><img width="35%" src="https://www.researchgate.net/profile/Elena-Tutubalina/publication/318507923/figure/fig2/AS:613947946319904@1523388005889/Illustration-of-the-word2vec-models-a-CBOW-b-skip-gram-16-33.png" /></p>
+<p align="center"><img width="70%" src="https://www.researchgate.net/profile/Elena-Tutubalina/publication/318507923/figure/fig2/AS:613947946319904@1523388005889/Illustration-of-the-word2vec-models-a-CBOW-b-skip-gram-16-33.png" /></p>
